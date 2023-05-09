@@ -59,6 +59,9 @@ Just as how we've created the `MakeSound` visitor class, we can create multiple 
 
 If you spot any errors in the walkthrough explanation or feel that a better explanation could be provided  - please reach out and let me know!
 
+>Additional Note: Crafting Interpreters by Robert Nystrom has greatly helped in my understanding of the concept 
+
+
 <!-- Why we need the interface 
 If we need to add other methods to the animal subclasses, like `startHunt()` or `startSleep()`, we simply need to create more visitor classes. To ensure every class correctly includes and implements the visit methods for each subclass, we make the classes inherit from the interface.
 ```c++
