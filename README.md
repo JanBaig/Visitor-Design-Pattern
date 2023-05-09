@@ -6,4 +6,4 @@ Adding new computations inside object classes works fine if the program being de
 The visitor pattern solves this problem. It allows for the addition of operations (methods) to object structures (classes) ***without modifying*** the existing structures themselves - resulting in less error prone code that is easier to maintain.
 
 ### Purpose
-This small program was developed to help myself understand the design pattern and use it as a quick reference before I go on to implement it in a few of my other projects.  
+This small program was developed to help myself understand the design pattern and use it as a quick reference before I go on to implement it in future projects.  
