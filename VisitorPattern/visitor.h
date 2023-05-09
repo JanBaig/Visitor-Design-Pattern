@@ -1,69 +1,57 @@
 #include <string>
 #include <iostream>
 
-class ComponentA;
-class ComponentB;
+class Cat;
+class Dog;
 
-class VisitorInterface { // the specific classes implement this
+class VisitorInterface {
 
 public:
-	virtual void visitComponentA(const ComponentA* comp) const = 0;
-	virtual void visitComponentB(const ComponentB* comp) const = 0;
+	virtual void visit(const Cat* comp) const = 0;
+	virtual void visit(const Dog* comp) const = 0;
 }; 
 
-class ComponentInterface { // visitable 'cat' 'dog'
+class ComponentInterface { 
 
 public:
 	virtual ~ComponentInterface() {};
 	virtual void accept(VisitorInterface* visit) const = 0;
 }; 
 
-class ComponentA : public ComponentInterface {
+class Cat : public ComponentInterface {
 
 public:
 
-	ComponentA() {};
+	Cat() {};
 
 	virtual void accept(VisitorInterface* visitor) const override {
-		visitor->visitComponentA(this);
+		visitor->visit(this);
 	};
 
-	std::string ComponentAFunc() const {
-		return "ComponentA";
-	}
 };
 
-class ComponentB : public ComponentInterface {
+class Dog : public ComponentInterface {
 
 public:
 
-	ComponentB() {};
+	Dog() {};
 
 	virtual void accept(VisitorInterface* visitor) const override {
-		visitor->visitComponentB(this);
+		visitor->visit(this);
 	};
-
-	std::string ComponentBFunc() const {
-		return "ComponentB";
-	}
 }; 
 
-// Define the visitors
-
-class Visitor1 : public VisitorInterface {
+class MakeSound : public VisitorInterface {
 
 public:
-	
-	void visitComponentA(const ComponentA* comp) const {
-		std::cout << "Visited " << comp->ComponentAFunc() << " from visitor.\n" << std::endl;
+
+	void visit(const Cat* comp) const {
+		std::cout << "Visited Cat component implementation: " << "\"Meow\"" << " from MakeSound visitor.\n" << std::endl;
 	}
-	
-	void visitComponentB(const ComponentB* comp) const {
-		std::cout << "Visited " << comp->ComponentBFunc() << " from visitor.\n" << std::endl;
+
+	void visit(const Dog* comp) const {
+		std::cout << "Visited Dog component implementation: " << "\"Woof\"" << " from MakeSound visitor.\n" << std::endl;
 	}
 
 };
-
-
-
 
