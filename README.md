@@ -14,8 +14,8 @@ This small program and explanation (below) was developed to help myself understa
 Say we have two types of animals: dogs and cats
 ```c++
 class Animal { }
-class Dog : publlic Animal { }
-class Cat : pubkic Animal { }
+class Dog : public Animal { }
+class Cat : public Animal { }
 ```
 We want to be able to define new animal behaviours for both of the animal types - like making sounds - without having to add a new method to each of the animal subclasses. We do this by defining a _**visitor class**_ that can hold all the implementations for the `makeSound()` method
 ```c++
