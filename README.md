@@ -59,7 +59,8 @@ Just as how we've created the `MakeSound` visitor class, we can create multiple 
 
 If you spot any errors in the walkthrough explanation or feel that a better explanation could be provided  - please reach out and let me know!
 
->Additional Note: Crafting Interpreters by Robert Nystrom has greatly helped in my understanding of the concept 
+>Additional Note: [Crafting Interpreters](https://craftinginterpreters.com/representing-code.html#the-visitor-pattern) by Robert Nystrom has greatly helped in my understanding of the concept as well as 
+>a youtube [video](https://youtu.be/pL4mOUDi54o) from Derek Banas
 
 
 <!-- Why we need the interface 
