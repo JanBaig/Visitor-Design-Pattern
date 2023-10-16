@@ -8,4 +8,4 @@ Adding new methods within subclasses works fine if the program being developed i
 The visitor design pattern solves this problem. It allows for the addition of methods into subclasses *without modifying* the existing subclasses themselves. So, if we need all of our subclasses to implement the `makeSound()` method, instead of _individually_ going into each subclass and adding it, we can instead couple all the `makeSound()` implementations for each subclass in one place. That way we only need to visit one section in our code and modify that section alone - effectively resulting in all subclasses having implementations of `makeSound()` without having to visit each and every subclass separately.
 
 
-> I've written a [blog](https://janbaig.netlify.app/posts/visitor_design_pattern/) explaining the concept in far greater detail if you'd like to learn more! 👾
+> Check out a [blog](https://janbaig.netlify.app/posts/visitor_design_pattern/) I've written explaining the concept in far greater detail if you'd like to learn more! 👾
