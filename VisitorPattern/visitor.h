@@ -24,7 +24,7 @@ public:
 
 	Cat() {};
 
-	virtual void accept(VisitorInterface* visitor) const override {
+	void accept(VisitorInterface* visitor) const override {
 		visitor->visit(this);
 	};
 
@@ -36,7 +36,7 @@ public:
 
 	Dog() {};
 
-	virtual void accept(VisitorInterface* visitor) const override {
+	void accept(VisitorInterface* visitor) const override {
 		visitor->visit(this);
 	};
 }; 
